@@ -1,7 +1,9 @@
 name: Code checks
 
 on:
-  workflow_dispatch:
+  push: 
+    branches:
+      - 'main'
 
 jobs:
   job1:
@@ -20,5 +22,9 @@ jobs:
     - name: Run linting tests
       run: | 
         flake8 src/model/
+    - name: Run training tests
+      run: |
+        python install -r requirements.txt
+        pytest tests/
 
 
