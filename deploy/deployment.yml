@@ -1,0 +1,6 @@
+$schema: https://azuremlschemas.azureedge.net/latest/managedOnlineDeployment.schema.json
+name: blue
+endpoint_name: diabetes-endpoint
+model: azureml:mslearn-model:1
+instance_type: Standard_D2_v3
+instance_count: 1
